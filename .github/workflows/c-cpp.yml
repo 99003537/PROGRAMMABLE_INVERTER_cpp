@@ -16,8 +16,8 @@ jobs:
     
     
     - name: make run
-      run: make run -C Cpp_Miniproject/3_Implementation/
+      run: make  -C Cpp_Miniproject/3_Implementation/
     
     - name: make test
-      run: make test -C Cpp_Miniproject/3_Implementation/
+      run: make  -C Cpp_Miniproject/3_Implementation/
 
