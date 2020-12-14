@@ -1,5 +1,5 @@
 name: C/C++ CI
-
+#
 on:
   push:
     branches: [ main ]
@@ -13,11 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    
-    
-    - name: make run
-      run: make  -C Cpp_Miniproject/3_Implementation/
-    
-    - name: make test
-      run: make  -C Cpp_Miniproject/3_Implementation/
 
+    - name: make
+      run: make run -C Cpp_Miniproject/3_Implementation/
+    - name: make
+      run: make test -C Cpp_Miniproject/3_Implementation/
