@@ -1,0 +1,28 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: make run
+      run: make run -C Cpp_Miniproject/3_Implementation/
+    
+    - name: make doc
+      run: make doc -C Cpp_Miniproject/3_Implementation/
+    
+    - name: make test
+      run: make test -C Cpp_Miniproject/3_Implementation/
+   
+    - name: make clean
+      run: make clean -C Cpp_Miniproject/3_Implementation/ 
+      
